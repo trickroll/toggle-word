@@ -15,7 +15,8 @@ app.use(express.static('public'))
 app.use(cors())
 
 let db
-const connectionString = process.env.DB_STRING
+// const connectionString = process.env.DB_STRING
+const connectionString = 'mongodb+srv://mdong:metaknight@cluster0.7ffxd.mongodb.net/?retryWrites=true&w=majority'
 const dbName = 'second-june-test'
 
 MongoClient.connect(connectionString)
