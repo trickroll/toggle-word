@@ -77,12 +77,12 @@ MongoClient.connect(connectionString)
             })
             .catch(err => console.log(err))
         })
-
+        app.listen(process.env.PORT ||PORT, () => {
+            console.log(`listening on port ${PORT}`)
+        })
 
     })
     .catch(err => console.error(err))
 
-app.listen(process.env.PORT ||PORT, () => {
-    console.log(`listening on port ${PORT}`)
-})
+
 
