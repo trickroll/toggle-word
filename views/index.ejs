@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am MICHAEL</title>
+</head>
+<body>
+    <h1>MICHAEL MICHAEL</h1>
+    <form action="/new" method="POST">
+        <input type="text" placeholder="first" name="one">
+        <input type="text" placeholder="last" name="second">
+        <button type="submit">submit</button>
+    </form>
+
+    <h2>Quotes</h2>
+
+    <ul class="quotes">
+        <!-- Loop through each object in array and insert -->
+
+        <% for (let i = 0; i < quotes.length; i++) {%>
+            <li class="q">
+                <span id="toggle"><%= quotes[i].one %> <%= quotes[i].second %></span>
+            </li>
+        <% } %>
+
+    </ul>
+    <div>
+        <h3>Delete Oldest</h3>
+        <!-- <p>Randomly Toggles Casing for quotes</p> -->
+        <button id="delete-button">Delete</button>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+</html>
