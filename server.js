@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
+app.use(cors())
 
 let db
 const connectionString = process.env.DB_STRING
